@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rename-Array-Index-Files", "Rename-Array-Index-Files\Rename-Array-Index-Files.csproj", "{A3AD517E-1D3D-4393-BF0C-39873650A2B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3AD517E-1D3D-4393-BF0C-39873650A2B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3AD517E-1D3D-4393-BF0C-39873650A2B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3AD517E-1D3D-4393-BF0C-39873650A2B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3AD517E-1D3D-4393-BF0C-39873650A2B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78FEA48C-29F6-41A8-843B-61227F32339A}
+	EndGlobalSection
+EndGlobal
