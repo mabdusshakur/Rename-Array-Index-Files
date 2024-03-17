@@ -17,14 +17,41 @@ namespace Rename_Array_Index_Files
             InitializeComponent();
         }
 
+        string[] names;
+
         private void Main_Load(object sender, EventArgs e)
         {
             
         }
-
+        
         private void selectFiles_btn_Click(object sender, EventArgs e)
         {
+            /*
+             * Configurations
+             */
+            selectFiles.Multiselect = true;
+
+            /*
+             * Functionality
+             */
             selectFiles.ShowDialog();
+            int startingNumber = 5;
+            int counter = startingNumber;
+            foreach (string name in selectFiles.FileNames)
+            {
+                string fileName = System.IO.Path.GetFileNameWithoutExtension(name);
+                string fileExtension = System.IO.Path.GetExtension(name);
+                string[] parts = fileName.Split('_');
+                if (parts.Length > 1)
+                {
+                    string prefix = string.Join("_", parts.Take(parts.Length - 1));
+                    string newFileName = prefix + "_" + counter;
+                    string newFilePath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(name), newFileName + fileExtension);
+                    System.IO.File.Move(name, newFilePath);
+                }
+                counter++;
+            }
+            MessageBox.Show("done");
         }
     }
 }
