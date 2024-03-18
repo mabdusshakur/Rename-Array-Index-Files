@@ -48,7 +48,9 @@ namespace Rename_Array_Index_Files
                 {
                     string prefix = string.Join("_", parts.Take(parts.Length - 1));
                     string newFileName = prefix + "_" + counter;
-                    string newFilePath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(name), newFileName + fileExtension);
+                    string renamedFilesFolder = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(name), "RenamedFiles");
+                    System.IO.Directory.CreateDirectory(renamedFilesFolder);
+                    string newFilePath = System.IO.Path.Combine(renamedFilesFolder, newFileName + fileExtension);
                     System.IO.File.Move(name, newFilePath);
                 }
                 counter++;
