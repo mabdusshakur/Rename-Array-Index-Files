@@ -26,6 +26,8 @@ namespace Rename_Array_Index_Files
         
         private void selectFiles_btn_Click(object sender, EventArgs e)
         {
+            int startingNumber = (int)startNumber.Value;
+
             /*
              * Configurations
              */
@@ -35,7 +37,7 @@ namespace Rename_Array_Index_Files
              * Functionality
              */
             selectFiles.ShowDialog();
-            int startingNumber = 5;
+
             int counter = startingNumber;
             foreach (string name in selectFiles.FileNames)
             {
